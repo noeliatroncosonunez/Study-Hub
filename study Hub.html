@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="study Hub.css">
+    <title>Study Hub - Platforma de Aprendizaje Autónomo</title>
+</head>
+<body>
+        <button id="topBtn">↑</button>
+
+        <header>
+            <div class="logo">
+                <h1>📘 Study Hub</h1>
+            </div>
+
+            <nav>
+                <a class="inicio.html">Inicio</a>
+                <a class="clases Online.html">Clases Online</a>
+                <a class="recursos.html">Recursos</a>
+                <a class="logros.html">Logros</a>
+                <a class="Calendario.html">Calendario</a>
+                <a class="ia studybot.html">IA StudyBot</a>
+                <a class="contacto.html">Contacto</a>
+            </nav>
+
+        <div class="auth-buttons">
+            <a href="#" class="btn-login" onclick="abrirLogin(); return false;">Iniciar Sesión</a>
+            <a href="#" class="btn-register" onclick="abrirRegistro(); return false;">Crear Cuenta</a>
+        </div>
+        </header>
+
+    <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="circulo circulo1"></div>
+            <div class="circulo circulo2"></div>
+            <div class="circulo circulo3"></div>
+
+                <h2>Aprende mejor 🚀</h2>
+                <p>Plataforma educativa moderna enfocada en el aprendizaje autónomo.</p>
+
+            <!--Beneficios-->
+            <section class="beneficios">
+                <div class="cards">
+                    <div class="card">
+                        <h3>📚 Recursos</h3>
+                        <p>Accede a una amplia variedad de materiales educativos para complementar tu aprendizaje como por ejemplo (videos, artículos, ejercicios).</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📈 Seguimiento del Progreso</h3>
+                        <p>Monitorea tu avance y alcanza tus metas de aprendizaje con herramientas de seguimiento intuitivas.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🤖 IA StudyBot</h3>
+                        <p>Recibe ayuda personalizada y respuestas rápidas a tus preguntas con nuestro asistente de inteligencia artificial.</p>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Recursos-->    
+         <section id="recursos">
+            <h2 class="titulo">Recursos Educativos</h2>
+            <div class="recursos-container">
+                <div class="cards">
+                    <div class="card">
+                        <h3>🎥 Clases</h3>
+                        <p>Aprende con videos interactivos.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📝 Quizzes</h3>
+                        <p>Evalúa tu conocimiento con ejercicios prácticos.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📅 Calendario</h3>
+                        <p>Organiza tu tiempo y mantente al día con las fechas importantes de tareas, pruebas, actividades y eventos.</p>
+                    </div>
+                </div>
+         </section>
+
+        <!-- Estadísticas -->
+        </section id="estadisticas">
+            <h2 class="titulo">Estadísticas</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>👨‍🎓 Usuarios</h3>
+                    <h1 id="usuarios">0</h1>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Cursos</h3>
+                    <h1 id="cursos">0</h1>
+                </div>
+
+                <div class="card">
+                    <h3>🏆 Logros</h3>
+                    <h1 id="logros">0%</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="titulo">Preguntas Frecuentes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>¿Cómo me registro?</h3>
+                    <p>Haz clic en "Crear Cuenta" y completa el formulario de registro con tu información.</p>
+                </div>
+
+                <div class="card">
+                    <h3>¿Es gratis?</h3>
+                    <p>Sí, ofrecemos una versión gratuita con acceso a recursos básicos. También tenemos planes premium con características adicionales.</p>
+                </div>
+
+                <div class="card">
+                    <h3>¿Puedo usarlo en mi móvil?</h3>
+                    <p>Sí, nuestra plataforma es completamente responsive y se puede adaptar a dispositivos móviles, computadores y otros dispositivos para que puedas aprender desde cualquier lugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Login -->
+         <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('loginModal')">&times;</span>
+                <h2>Iniciar Sesión</h2>
+                <form onsubmit="validarLogin(event)">
+
+                    <input type="email" id="loginEmail" placeholder="Correo Electrónico" required>
+                    <div class="password-box">
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                        <span class="show-password" onclick="mostrarContrasena('loginPassword')">Mostrar</span>
+                    </div>
+
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Registro -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('registerModal')">&times;</span>
+                <h2>Crear Cuenta</h2>
+                <form onsubmit="validarRegistro(event)">
+
+                    <input type="text" id="registerName" placeholder="Nombre Completo" required>
+                    <input type="email" id="registerEmail" placeholder="Correo Electrónico" required>
+                    <div class="password-box">
+                        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                        <span class="show-password" onclick="mostrarContrasena('registerPassword')">Mostrar</span>
+                    </div>
+
+                    <button type="submit">Crear Cuenta</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+         <footer>© 2026 Study hub - Plataforma de Aprendizaje Autónomo</footer>
+
+        <script src="study Hub.js"></script>
+</body>
+</html> 
