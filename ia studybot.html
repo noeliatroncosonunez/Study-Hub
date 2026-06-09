@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub | IA StudyBot</title>
+
     <link rel="stylesheet" href="study Hub.css">
-    <title>IA StudyBot</title>
 </head>
 <body>
-    <header>
-        <h1>IA StudyBot</h1>
+
+    <header class="header-bot">
+        <h1>🤖 IA StudyBot</h1>
+        <p>
+            Tu asistente virtual de aprendizaje. Haz preguntas sobre tus asignaturas y recibe ayuda inmediata.
+        </p>
     </header>
 
-    <section>
-        <div class="card" style="margin: auto;">
-            <h3>Asistente Virtual</h3>
-            <input type="text" id="pregunta" placeholder="Haz una pregunta">
-            <button onclick="responderIA()">
-            Enviar</button>
+    <main class="chat-container">
+
+        <div class="chat-box" id="chatBox">
+
+            <div class="mensaje bot">
+                👋 ¡Hola! Soy StudyBot.
+                ¿En qué puedo ayudarte hoy?
+            </div>
+
         </div>
-    </section>
+
+        <div class="input-container">
+
+            <input
+                type="text"
+                id="pregunta"
+                placeholder="Escribe tu pregunta aquí..."
+            >
+
+            <button onclick="responderIA()">
+                Enviar
+            </button>
+
+        </div>
+
+    </main>
+
+    <div class="volver">
+        <button onclick="window.location.href='studyhub.html'">
+            ⬅ Volver al Inicio
+        </button>
+    </div>
 
     <script src="study Hub.js"></script>
+
 </body>
 </html>
