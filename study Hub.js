@@ -122,10 +122,129 @@ window.addEventListener("scroll",()=> {
     });
 });
 
+let contadorPreguntas = 0;
+
 function responderIA(){
-    const respuesta = document.getElementById("respuesta");
-    respuesta.innerHTML = "📘 Te recomiendo estudiar 30 minutos diarios.";
+
+    let pregunta = document.getElementById("pregunta").value.trim();
+
+    if(pregunta === ""){
+        return;
+    }
+
+    contadorPreguntas++;
+
+    document.getElementById("contador").textContent =
+    contadorPreguntas;
+
+    let chatBox = document.getElementById("chatBox");
+
+    let hora = new Date().toLocaleTimeString([],{
+        hour:"2-digit",
+        minute:"2-digit"
+    });
+
+    chatBox.innerHTML += `
+        <div class="mensaje usuario">
+            ${pregunta}
+            <small>${hora}</small>
+        </div>
+    `;
+
+    let respuesta =
+    "Actualmente estoy aprendiendo. Intenta con otra pregunta.";
+
+    let texto = pregunta.toLowerCase();
+
+    if(texto.includes("html")){
+        respuesta =
+        "HTML es el lenguaje utilizado para estructurar páginas web.";
+    }
+
+    else if(texto.includes("css")){
+        respuesta =
+        "CSS permite diseñar y dar estilo a los elementos de una página web.";
+    }
+
+    else if(texto.includes("javascript")){
+        respuesta =
+        "JavaScript agrega interactividad y funcionalidades dinámicas a una página web.";
+    }
+
+    else if(texto.includes("matem")){
+        respuesta =
+        "Las matemáticas estudian números, operaciones y relaciones entre cantidades.";
+    }
+
+    else if(texto.includes("historia")){
+        respuesta =
+        "La historia estudia los acontecimientos del pasado para comprender el presente.";
+    }
+
+    else if(texto.includes("fotosíntesis") || texto.includes("fotosintesis")){
+        respuesta =
+        "La fotosíntesis es el proceso mediante el cual las plantas producen su alimento usando luz solar.";
+    }
+
+    else if(texto.includes("inglés") || texto.includes("ingles")){
+        respuesta =
+        "El inglés es uno de los idiomas más utilizados en el mundo y en la tecnología.";
+    }
+
+    else if(texto.includes("estudiar")){
+        respuesta =
+        "Estudia en bloques de 25 minutos, toma descansos y practica constantemente.";
+    }
+
+    setTimeout(() => {
+
+        chatBox.innerHTML += `
+            <div class="mensaje bot">
+                🤖 ${respuesta}
+                <small>${hora}</small>
+            </div>
+        `;
+
+        chatBox.scrollTop =
+        chatBox.scrollHeight;
+
+    },800);
+
+    document.getElementById("pregunta").value = "";
 }
+
+function preguntaRapida(texto){
+
+    document.getElementById("pregunta").value =
+    texto;
+
+    responderIA();
+}
+
+function limpiarChat(){
+
+    document.getElementById("chatBox").innerHTML = `
+        <div class="mensaje bot">
+            👋 ¡Hola! Soy StudyBot.
+            ¿En qué puedo ayudarte hoy?
+        </div>
+    `;
+
+    contadorPreguntas = 0;
+
+    document.getElementById("contador").textContent =
+    "0";
+}
+
+document.getElementById("pregunta").addEventListener(
+"keypress",
+function(event){
+
+    if(event.key === "Enter"){
+        responderIA();
+    }
+
+});
 
 function desbloquear(){
     alert("🏆 ¡Nuevo logro desbloqueado!");

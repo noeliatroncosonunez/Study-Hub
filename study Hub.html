@@ -23,19 +23,23 @@
                 <a href="calendario.html">Calendario</a>
                 <a href="ia studybot.html">IA StudyBot</a>
                 <a href="contacto.html">Contacto</a>
+            </nav>
 
         <div class="auth-buttons">
-            <a href="#" class="btn-login" onclick="abrirLogin(); return false;">Iniciar Sesión</a>
-            <a href="#" class="btn-register" onclick="abrirRegistro(); return false;">Crear Cuenta</a>
+            <button class="btn-login" onclick="abrirLogin()">
+                Iniciar Sesión
+            </button>
+
+            <button class="btn-register" onclick="abrirRegistro()">
+                📝 Crear Cuenta
+            </button>
+
+            <div id="usuarioLogueado" class="usuario"></div>
         </div>
         </header>
 
-    <!-- Hero -->
-        <section class="hero" id="hero">
-            <div class="circulo circulo1"></div>
-            <div class="circulo circulo2"></div>
-            <div class="circulo circulo3"></div>
-
+        
+        <section>
                 <h2>Aprende mejor 🚀</h2>
                 <p>Plataforma educativa moderna enfocada en el aprendizaje autónomo.</p>
         </section>
@@ -107,11 +111,6 @@
         <section id="faq">
             <h2 class="titulo">Preguntas Frecuentes</h2>
             <div class="cards">
-                <div class="card">
-                    <h3>¿Cómo me registro?</h3>
-                    <p>Haz clic en "Crear Cuenta" y completa el formulario de registro con tu información.</p>
-                </div>
-
                 <div class="card">
                     <h3>¿Es gratis?</h3>
                     <p>Sí, ofrecemos una versión gratuita con acceso a recursos básicos. También tenemos planes premium con características adicionales.</p>
