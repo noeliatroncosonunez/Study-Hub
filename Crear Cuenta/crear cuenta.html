@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crear cuenta.css">
+    <title>Crear Cuenta</title>
+</head>
+<body>
+    
+<div class="container">
+    <h2>Crear Cuenta</h2>
+
+    <form id="registroForm">
+        <div class="input-box">
+            <label>Nombre Completo</label>
+            <input type="text" id="nombre" required>
+        </div>
+
+        <div class="input-box">
+            <label>Correo Electrónico</label>
+            <input type="email" id="correo" required>
+        </div>
+
+        <div class="input-box">
+            <label>Contraseña</label>
+            <input type="password" id="password" minlength="6" required>
+        </div>
+
+        <div class="input-box">
+            <label>Confirmar Contraseña</label>
+            <input type="password" id="confirmar" required>
+        </div>
+
+        <button type="submit">
+        Crear Cuenta
+        </button>
+
+    </form>
+
+    <div id="mensaje"></div>
+
+    <p>¿Ya tienes cuenta?
+    <a href=""></a>
+    </p>
+</div>
+
+</body>
+</html>
