@@ -66,12 +66,24 @@
 }
 
 .hero{
-    background: linear-gradient(135deg, #0d47a1, #0288d1, #4fc3f7);
+    background: linear-gradient(135deg, #BD00FF, #E0421E, #FFA73B);
     background-size: 300% 300%;
     animation: fondoAnimado 8s ease infinite;
     color: white;
     text-align: center;
     padding: 120px 20px;
+}
+
+@keyframes fondoAnimado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero h2{
