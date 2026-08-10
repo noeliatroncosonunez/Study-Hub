@@ -25,15 +25,22 @@
                 <a href="contacto.html">Contacto</a>
             </nav>
 
+        <!-- Botones de inicio de sesión y registro -->
+
         <div class="auth-buttons">
             <button class="btn-login" onclick="abrirLogin()">
                 Iniciar Sesión
             </button>
 
-            <button class="btn-register" onclick="abrirRegistro()">
-                📝 Crear Cuenta
-            </button>
+       <button class="btn-register" onclick="abrirRegistro()">
+        Crear Cuenta
+        </button>
 
+        <div id="formulario-registro" style="display: none;">
+            <h2>Crear una cuenta</h2>
+        </div>
+
+        
             <div id="usuarioLogueado" class="usuario"></div>
         </div>
         </header>
@@ -122,43 +129,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Modal Login -->
-         <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal('loginModal')">&times;</span>
-                <h2>Iniciar Sesión</h2>
-                <form onsubmit="validarLogin(event)">
-
-                    <input type="email" id="loginEmail" placeholder="Correo Electrónico" required>
-                    <div class="password-box">
-                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
-                        <span class="show-password" onclick="mostrarContrasena('loginPassword')">Mostrar</span>
-                    </div>
-
-                    <button type="submit">Iniciar Sesión</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Modal Registro -->
-        <div id="registerModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal('registerModal')">&times;</span>
-                <h2>Crear Cuenta</h2>
-                <form onsubmit="validarRegistro(event)">
-
-                    <input type="text" id="registerName" placeholder="Nombre Completo" required>
-                    <input type="email" id="registerEmail" placeholder="Correo Electrónico" required>
-                    <div class="password-box">
-                        <input type="password" id="registerPassword" placeholder="Contraseña" required>
-                        <span class="show-password" onclick="mostrarContrasena('registerPassword')">Mostrar</span>
-                    </div>
-
-                    <button type="submit">Crear Cuenta</button>
-                </form>
-            </div>
-        </div>
 
         <!-- Footer -->
          <footer>© 2026 Study hub - Plataforma de Aprendizaje Autónomo</footer>
