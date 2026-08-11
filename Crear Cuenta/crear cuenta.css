@@ -1,118 +1,44 @@
-/* Fondo moderno con gradiente dinámico */
 body {
     background:linear-gradient(135deg,#1c66c7,#0463d1);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #f8fafc;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 2rem 1rem; /* Espacio extra arriba y abajo en pantallas pequeñas */
+    padding: 2rem 1rem;
 }
 
-/* Tarjeta principal - Más amplia y con más padding interno */
-.container {
+/* Reemplazado .container por main.card */
+main.card {
     background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 28px;
-    padding: 3rem 2.5rem; /* Aumentado el espacio interior */
+    padding: 3rem 2.5rem;
     width: 100%;
     max-width: 440px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
-/* Encabezado con más distancia del contenido */
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem; /* Más separación del título */
-}
-
-.header-text {
-    margin-bottom: 2.2rem; /* Más espacio antes de los botones de login social */
-}
-
-.header-text h2 {
-    margin: 0 0 0.5rem 0;
+.h2 {
+    margin: 0 0 0,5rem 0;
     font-size: 1.75rem;
 }
 
-.header-text p {
-    margin: 0;
+.p {
+    margin: 0 0 2.2rem 0;
     color: #94a3b8;
-    font-size: 0.95rem;
-}
-
-/* Botones sociales más separados entre sí */
-.social-signup {
-    display: flex;
-    gap: 1.2rem; /* Aumentado la separación entre Google y GitHub */
     margin-bottom: 2rem;
 }
 
-.btn-social {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.85rem;
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-/* Divisor con margen amplio arriba y abajo */
-.divider {
-    text-align: center;
-    margin: 2rem 0; 
-    position: relative;
-    color: #64748b;
-    font-size: 0.85rem;
-}
-
-/* Campos de texto (Inputs) - Mayor distancia entre cada uno */
-.input-group {
-    position: relative;
-    margin-bottom: 1.6rem; /* Subido de 1.2rem a 1.6rem */
-}
-
-.input-group input {
+btn-submit {
     width: 100%;
-    padding: 1.1rem 1rem 1.1rem 3rem; /* Cajas ligeramente más altas */
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 14px;
-    color: #fff;
-    outline: none;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-/* Checkbox de Términos con más aire */
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-top: 1rem;
-    margin-bottom: 2.2rem; /* Más separación antes del botón de registro */
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-/* Botón principal más destacado */
-.btn-submit {
-    width: 100%;
-    padding: 1.1rem; /* Botón un poco más alto y fácil de presionar */
+    padding: 1.1rem;
     border: none;
     border-radius: 14px;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: linear-gradient(135deg, #6366f1, #a855f7 );
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -123,10 +49,16 @@ body {
     gap: 0.6rem;
 }
 
-/* Pie de página separado */
-.login-footer {
-    margin-top: 2.5rem; /* Más distancia al final de la tarjeta */
+.mensaje {
+    display: block;
+    margin-top: 1rem;
     text-align: center;
-    font-size: 0.9rem;
-    color: #94a3b8;
+}
+
+/* FOOTER */
+footer{
+     background-color: black;
+    color:white;
+    text-align:center;
+    padding:50px;
 }
