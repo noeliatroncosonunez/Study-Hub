@@ -1,64 +1,126 @@
-body {
-    background:linear-gradient(135deg,#1c66c7,#0463d1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f8fafc;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 2rem 1rem;
-}
+/* Estilos base y fondo animado */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top left, #0d47a1, #0288d1, #4fc3f7),
+                  radial-gradient(circle at bottom right,#0288d1, #4fc3f7);
+      color: #f3f4f6;
+    }
 
-/* Reemplazado .container por main.card */
-main.card {
-    background: rgba(30, 41, 59, 0.7);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 28px;
-    padding: 3rem 2.5rem;
-    width: 100%;
-    max-width: 440px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-}
+    /* Tarjeta principal con efecto Cristal (Glassmorphism) */
+    main {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                  0 0 80px rgba(139, 92, 246, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
 
-.h2 {
-    margin: 0 0 0,5rem 0;
-    font-size: 1.75rem;
-}
+    /* Encabezado */
+    header {
+      text-align: center;
+    }
 
-.p {
-    margin: 0 0 2.2rem 0;
-    color: #94a3b8;
-    margin-bottom: 2rem;
-}
+    header h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #383e87, #150292);
+    }
 
-btn-submit {
-    width: 100%;
-    padding: 1.1rem;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #6366f1, #a855f7 );
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-}
+    header p {
+      margin: 0.4rem 0 0;
+      color: white;
+      font-size: 0.9rem;
+    }
 
-.mensaje {
-    display: block;
-    margin-top: 1rem;
-    text-align: center;
-}
+    /* Formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
 
-/* FOOTER */
-footer{
-     background-color: black;
-    color:white;
-    text-align:center;
-    padding:50px;
-}
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: #d1d5db;
+      font-weight: 500;
+    }
+
+    input {
+      background: rgba(254, 254, 254, 0.938);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      color: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+      color: #6b7280;
+    }
+    /* Efecto Neón al enfocar */
+    input:focus {
+      border-color: #c084fc;
+      box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    /* Botón Degradado con Glow */
+    button {
+      margin-top: 0.6rem;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1452af, #2b149fc0);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.679);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #0b02bec9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: #8372f4;
+      text-decoration: underline;
+    }
