@@ -1,177 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Estilos base y fondo animado */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top left, #0d47a1, #0288d1, #4fc3f7),
+                  radial-gradient(circle at bottom right,#0288d1, #4fc3f7);
+      color: #f3f4f6;
+    }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Degradado personalizado */
-    background: linear-gradient(135deg, #0d47a1, #0288d1, #4fc3f7);
-    padding: 20px;
-}
+    /* Tarjeta principal con efecto Cristal (Glassmorphism) */
+    main {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                  0 0 80px rgba(139, 92, 246, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
 
-.container {
-    background: #ffffff;
-    padding: 35px 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    max-width: 420px;
-    position: relative;
-}
+    /* Encabezado */
+    header {
+      text-align: center;
+    }
 
-.back-link {
-    display: inline-block;
-    color: #0288d1;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
+    header h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #383e87, #150292);
+    }
 
-.back-link:hover {
-    color: #0d47a1;
-}
+    header p {
+      margin: 0.4rem 0 0;
+      color: white;
+      font-size: 0.9rem;
+    }
 
-.header {
-    text-align: center;
-    margin-bottom: 25px;
-}
+    /* Formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
 
-.header h2 {
-    color: #0d47a1;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: #d1d5db;
+      font-weight: 500;
+    }
 
-.header p {
-    color: #666;
-    font-size: 0.95rem;
-}
+    input {
+      background: rgba(254, 254, 254, 0.938);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      color: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
 
-.input-box {
-    margin-bottom: 18px;
-    display: flex;
-    flex-direction: column;
-}
+    input::placeholder {
+      color: #6b7280;
+    }
+    /* Efecto NeÃ³n al enfocar */
+    input:focus {
+      border-color: #c084fc;
+      box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+    }
 
-.input-box label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 6px;
-}
+    /* BotÃ³n Degradado con Glow */
+    button {
+      margin-top: 0.6rem;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1452af, #2b149fc0);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+      transition: all 0.3s ease;
+    }
 
-.input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.679);
+    }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
+    button:active {
+      transform: translateY(0);
+    }
 
-input:focus {
-    border-color: #0288d1;
-    box-shadow: 0 0 8px rgba(2, 136, 209, 0.2);
-}
+    /* Pie de pÃ¡gina */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
 
-/* Botón interactivo dentro del input de contraseña */
-.toggle-password {
-    position: absolute;
-    right: 12px;
-    background: none;
-    border: none;
-    color: #0288d1;
-    font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 5px;
-    transition: background 0.2s ease;
-}
+    footer a {
+      color: #0b02bec9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
 
-.toggle-password:hover {
-    background: #f0f8ff;
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #0d47a1, #0288d1);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
-    transition: all 0.3s ease;
-}
-
-.btn-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.4);
-}
-
-.btn-submit:active {
-    transform: translateY(0);
-}
-
-/* Caja de mensajes dinámicos */
-.mensaje {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    text-align: center;
-    display: none;
-}
-
-.mensaje.error {
-    display: block;
-    background-color: #ffebee;
-    color: #c62828;
-    border: 1px solid #ef9a9a;
-}
-
-.mensaje.exito {
-    display: block;
-    background-color: #e8f5e9;
-    color: #2e7d32;
-    border: 1px solid #a5d6a7;
-}
-
-.login-link {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.login-link a {
-    color: #0288d1;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
+    footer a:hover {
+      color: #8372f4;
+      text-decoration: underline;
+    }

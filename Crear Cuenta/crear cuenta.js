@@ -1,55 +1,38 @@
-// Función para mostrar / ocultar contraseñas
-function togglePass(inputId, button) {
-    const input = document.getElementById(inputId);
-    
-    if (input.type === 'password') {
-        input.type = 'text';
-        button.textContent = 'Ocultar';
-    } else {
-        input.type = 'password';
-        button.textContent = 'Ver';
-    }
-}
+const form = document.getElementById('registerForm');
+    const passwordInput = document.getElementById('password');
+    const togglePasswordBtn = document.getElementById('togglePassword');
+    const meter = document.getElementById('passwordStrength');
+    const successMessage = document.getElementById('successMessage');
 
-// Validación e interacción al enviar el formulario
-document.getElementById('registroForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita recargar la página
+    // 1. Mostrar / Ocultar contraseÃ±a
+    togglePasswordBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      togglePasswordBtn.textContent = isPassword ? 'ðŸ™ˆ' : 'ðŸ‘ ï¸ ';
+    });
 
-    const nombre = document.getElementById('nombre').value.trim();
-    const correo = document.getElementById('correo').value.trim();
-    const password = document.getElementById('password').value;
-    const confirmar = document.getElementById('confirmar').value;
-    const mensajeDiv = document.getElementById('mensaje');
+    // 2. Medidor visual de fortaleza de contraseÃ±a
+    passwordInput.addEventListener('input', () => {
+      const val = passwordInput.value;
+      let score = 0;
 
-    // Validación de campos vacíos
-    if (!nombre || !correo || !password || !confirmar) {
-        mostrarMensaje('Por favor, completa todos los campos.', 'error');
-        return;
-    }
+      if (val.length >= 6) score++;
+      if (val.length >= 10) score++;
+      if (/[A-Z]/.test(val) && /[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
 
-    // Validación del largo de contraseña
-    if (password.length < 6) {
-        mostrarMensaje('La contraseña debe tener al menos 6 caracteres.', 'error');
-        return;
-    }
+      meter.value = score;
+    });
 
-    // Validación de coincidencia de contraseñas
-    if (password !== confirmar) {
-        mostrarMensaje('Las contraseñas no coinciden.', 'error');
-        return;
-    }
+    // 3. EnvÃ­o animado con estado de Ã©xito
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    // Si todo está correcto
-    mostrarMensaje('¡Cuenta creada con éxito! Redirigiendo...', 'exito');
-
-    // Simula la redirección al inicio de sesión o página principal
-    setTimeout(() => {
-        window.location.href = 'index.html';
-    }, 2000);
-});
-
-function mostrarMensaje(texto, tipo) {
-    const mensajeDiv = document.getElementById('mensaje');
-    mensajeDiv.textContent = texto;
-    mensajeDiv.className = `mensaje ${tipo}`;
-}
+      // AnimaciÃ³n de desvanecimiento del formulario
+      form.style.opacity = '0';
+      
+      setTimeout(() => {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      }, 300);
+    });
