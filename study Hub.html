@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,8 @@
                 <h1>📘 Study Hub</h1>
             </div>
 
+        <!--Barra de Navegación-->
             <nav>
-                <a href="inicio.html">Inicio</a>
                 <a href="clases online.html">Clases Online</a>
                 <a href="recursos.html">Recursos</a>
                 <a href="sobre.html">Sobre Nosotros</a>
@@ -25,15 +25,14 @@
                 <a href="contacto.html">Contacto</a>
             </nav>
 
-        <div class="auth-buttons">
-            <button class="btn-login" onclick="abrirLogin()">
-                Iniciar Sesión
-            </button>
-
-            <button class="btn-register" onclick="abrirRegistro()">
-                📝 Crear Cuenta
-            </button>
-
+    <main>
+   
+        <!-- Botones de Sesión -->
+        <div id="usuarioLogueado" class="usuario">
+            <a href="iniciar sesion/iniciar sesion.html" class="btn btn-login">Iniciar Sesión</a>
+            <a href="Crear Cuenta/crear cuenta.html" class="btn btn-register">Crear Cuenta</a>
+        </div>
+            
             <div id="usuarioLogueado" class="usuario"></div>
         </div>
         </header>
@@ -122,43 +121,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Modal Login -->
-         <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal('loginModal')">&times;</span>
-                <h2>Iniciar Sesión</h2>
-                <form onsubmit="validarLogin(event)">
-
-                    <input type="email" id="loginEmail" placeholder="Correo Electrónico" required>
-                    <div class="password-box">
-                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
-                        <span class="show-password" onclick="mostrarContrasena('loginPassword')">Mostrar</span>
-                    </div>
-
-                    <button type="submit">Iniciar Sesión</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Modal Registro -->
-        <div id="registerModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal('registerModal')">&times;</span>
-                <h2>Crear Cuenta</h2>
-                <form onsubmit="validarRegistro(event)">
-
-                    <input type="text" id="registerName" placeholder="Nombre Completo" required>
-                    <input type="email" id="registerEmail" placeholder="Correo Electrónico" required>
-                    <div class="password-box">
-                        <input type="password" id="registerPassword" placeholder="Contraseña" required>
-                        <span class="show-password" onclick="mostrarContrasena('registerPassword')">Mostrar</span>
-                    </div>
-
-                    <button type="submit">Crear Cuenta</button>
-                </form>
-            </div>
-        </div>
+    </main>
 
         <!-- Footer -->
          <footer>© 2026 Study hub - Plataforma de Aprendizaje Autónomo</footer>
