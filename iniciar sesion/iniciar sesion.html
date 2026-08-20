@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Study Hub</title>
+    <link rel="stylesheet" href="iniciar sesion.css">
+    <title>Inicio de Sesión - Study Hub</title>
 </head>
 <body>
+
+    <header>
+        <section class="logo">
+            <h1>📚 Study Hub</h1>
+        </section>
+        <nav>
+            <a href="../index.html">Volver al Inicio</a>
+        </nav>
+    </header>
+
     <main>
-        <div class="login-container">
+        <article class="login-container">
             <h2>Iniciar Sesión</h2>
         
-            <!-- Mensaje de error dinámico -->
-            <div id="error-message" class="alert-error" style="display: none;"></div>
+            <p id="error-message" class="alert-error" style="display: none;"></p>
             
             <form id="loginForm">
-                <div class="input-group">
+                <section class="input-group">
                     <label for="username">Usuario o Correo</label>
                     <input type="text" id="username" name="username" placeholder="Tu usuario o email" required autocomplete="username">
-                </div>
+                </section>
 
-                <div class="input-group">
+                <section class="input-group">
                     <label for="password">Contraseña</label>
-                    <div class="password-wrapper">
+                    <span class="password-wrapper">
                         <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
                         <button type="button" id="togglePassword" class="btn-toggle">👁️</button>
-                    </div>
-                </div>
+                    </span>
+                </section>
 
                 <button type="submit" class="btn-login">Ingresar</button>
             </form>
 
-            <div class="login-footer">
-                <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
-            </div>
-        </div>
+            <footer class="login-footer">
+                <p>¿No tienes una cuenta? <a href="../Crear Cuenta/crear cuenta.html">Regístrate aquí</a></p>
+            </footer>
+        </article>
     </main>
 
     <script src="iniciar sesion.js"></script>
