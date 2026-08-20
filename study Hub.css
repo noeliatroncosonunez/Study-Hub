@@ -311,108 +311,284 @@ a {
     cursor:pointer;
 }
 
-    /* Clases online */
+   /*==========================
+      CLASES ONLINE
+===========================*/
 
-        /* ENCABEZADO */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f9fc;
+}
 
-header{
-    background:linear-gradient(
-        135deg,
-        #0d47a1,
-        #0288d1,
-        #4fc3f7
-    );
+/*========== BANNER ==========*/
+
+.banner-clases{
+
+    background:linear-gradient(135deg,#0d47a1,#0288d1,#4fc3f7);
+    color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:70px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
 }
 
-header h1{
-    font-size:3rem;
+.banner-clases h1{
+
+    font-size:3.2rem;
     margin-bottom:15px;
+
 }
 
-header p{
-    max-width:700px;
+.banner-clases p{
+
+    font-size:18px;
+    max-width:800px;
     margin:auto;
-    font-size:1.1rem;
+    line-height:1.8;
+
 }
 
-/* CONTENEDOR */
+/*========== ESTADÍSTICAS ==========*/
+
+.estadisticas{
+
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-top:40px;
+    flex-wrap:wrap;
+
+}
+
+.estadisticas div{
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.2);
+    padding:20px;
+    width:180px;
+    border-radius:15px;
+
+}
+
+.estadisticas h2{
+
+    font-size:35px;
+    margin-bottom:10px;
+
+}
+
+/*========== BUSCADOR ==========*/
+
+.buscador{
+
+    text-align:center;
+    margin:40px 0;
+
+}
+
+.buscador input{
+
+    width:60%;
+    max-width:700px;
+    padding:16px;
+    border:none;
+    border-radius:30px;
+    font-size:17px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    outline:none;
+
+}
+
+.buscador input:focus{
+
+    border:2px solid #29b6f6;
+
+}
+
+/*========== CONTENEDOR ==========*/
 
 .contenedor-clases{
+
     width:90%;
-    max-width:1200px;
-    margin:50px auto;
+    max-width:1400px;
+    margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+
+    margin-bottom:60px;
+
 }
 
-/* TARJETAS */
+/*========== TARJETAS ==========*/
 
 .clase-card{
+
     background:white;
-    border-radius:15px;
+    border-radius:20px;
     padding:30px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:0.3s;
+    transition:.35s;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-top:6px solid #29b6f6;
+
 }
 
 .clase-card:hover{
-    transform:translateY(-8px);
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(2,136,209,.25);
+
 }
 
 .icono{
-    font-size:3rem;
+
+    font-size:60px;
     margin-bottom:15px;
+
 }
 
 .clase-card h2{
-    color:#243447;
-    margin-bottom:10px;
+
+    color:#01579b;
+    margin-bottom:15px;
+
 }
 
 .clase-card p{
-    color:#666;
-    line-height:1.6;
-    margin-bottom:20px;
+
+    color:#555;
+    line-height:1.8;
+
 }
 
-/* BOTONES */
+/*========== INFORMACIÓN ==========*/
+
+.info{
+
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    margin-bottom:15px;
+    font-weight:bold;
+    color:#0288d1;
+
+}
+
+.profesor{
+
+    color:#666;
+    font-size:15px;
+    margin-bottom:20px;
+
+}
+
+/*========== BARRA DE PROGRESO ==========*/
+
+.progreso{
+
+    background:#dbefff;
+    height:10px;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:20px;
+
+}
+
+.barra{
+
+    height:100%;
+    background:linear-gradient(90deg,#29b6f6,#0288d1);
+    border-radius:30px;
+
+}
+
+/*========== BOTÓN ==========*/
 
 .clase-card button{
-    background:#4fc3f7;
-    color:white;
+
+    width:100%;
+    padding:15px;
     border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
+    border-radius:30px;
+    background:linear-gradient(135deg,#0288d1,#29b6f6);
+    color:white;
+    font-size:16px;
     font-weight:bold;
-    transition:0.3s;
+    cursor:pointer;
+    transition:.3s;
+
 }
 
 .clase-card button:hover{
-    background:#29b6f6;
+
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#01579b,#0288d1);
+
 }
 
+/*========== BOTÓN VOLVER ==========*/
+
 .volver{
+
     text-align:center;
     margin-bottom:50px;
+
 }
 
 .volver button{
-    background:#243447;
+
+    background:#01579b;
     color:white;
     border:none;
-    padding:14px 30px;
-    border-radius:10px;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:17px;
     cursor:pointer;
-    font-size:1rem;
+    transition:.3s;
+
 }
 
 .volver button:hover{
-    background:#182330;
+
+    background:#0288d1;
+    transform:translateY(-3px);
+
+}
+
+/*========== RESPONSIVE ==========*/
+
+@media(max-width:768px){
+
+.banner-clases h1{
+
+    font-size:2.4rem;
+
+}
+
+.estadisticas{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.buscador input{
+
+    width:90%;
+
+}
+
+.info{
+
+    flex-direction:column;
+    gap:8px;
+
+}
+
 }
 
 /* RECURSOS EDUCATIVOS */
