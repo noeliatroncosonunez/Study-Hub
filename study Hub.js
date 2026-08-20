@@ -61,18 +61,9 @@ function validarLogin(event){
     }
 }
 
-// Validar Registro
-function validarRegistro(event){
-    event.preventdefault();
-    const nombre = document.getElementById("registroNombre").value;
-
-    if(nombre.length < 3){
-        alert("⚠ Nombre demasiado corto");
-        return;
-    }
-
-    alert("✅ Cuenta creada");
-    cerrarModal("registroModal");
+function abrirRegistro() {
+    // Cambia la visibilidad de la sección a visible
+    document.getElementById("formulario-registro").style.display = "block";
 }
 
 // Cerrar Modal
