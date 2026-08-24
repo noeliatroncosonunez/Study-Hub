@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+  const registerForm = document.getElementById('registerForm');
+  const passwordInput = document.getElementById('password');
+  const confirmPasswordInput = document.getElementById('confirmPassword');
+  const togglePasswordBtn = document.getElementById('togglePassword');
+  const errorMessage = document.getElementById('error-message');
+
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -45,4 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.textContent = msg;
         errorMessage.style.display = 'block';
     }
+
+    if (password.length < 6) {
+      showError('La contraseña debe tener al menos 6 caracteres.');
+      return;
+    }
+
+    // Almacenar el usuario registrado para la sesión
+    localStorage.setItem('nombreUsuario', username);
+
+    // Redirigir al inicio
+    window.location.href = '../study Hub.html';
+  });
+
+  function showError(msg) {
+    errorMessage.textContent = msg;
+    errorMessage.style.display = 'block';
+  }
 });

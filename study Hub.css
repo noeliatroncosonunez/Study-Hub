@@ -166,79 +166,31 @@
             color:#2563eb;
         }
 
-        /* LOGIN MODAL */
+ /* Contenedor principal de autenticación */
+#usuarioLogueado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .modal{
-            display:none;
-            position:fixed;
-            z-index:2000;
-            left:0;
-            top:0;
-            width:100%;
-            height:100%;
-            background:rgba(0,0,0,0.6);
+/* Estilos base de los botones dentro del contenedor */
+#usuarioLogueado .btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
-            justify-content:center;
-            align-items:center;
-        }
-
-        .modal-content{
-            background:white;
-            padding:40px;
-            width:350px;
-            border-radius:20px;
-            text-align:center;
-            position:relative;
-        }
-
-        .modal-content h2{
-            margin-bottom:20px;
-            color:#2563eb;
-        }
-
-        .modal-content input{
-            width:100%;
-            padding:15px;
-            margin:10px 0;
-            border:2px solid #ddd;
-            border-radius:10px;
-        }
-
-        .modal-content button{
-            width:100%;
-            padding:15px;
-            border:none;
-            border-radius:10px;
-            background:#2563eb;
-            color:white;
-            font-weight:bold;
-            cursor:pointer;
-            margin-top:10px;
-        }
-
-        .close{
-            position:absolute;
-            top:15px;
-            right:20px;
-            font-size:25px;
-            cursor:pointer;
-        }
-
-        /* PASSWORD */
-
-        .password-box{
-            position:relative;
-        }
-
-        .show-password{
-            position:absolute;
-            right:15px;
-            top:22px;
-            cursor:pointer;
-            font-size:14px;
-            color:#2563eb;
-            font-weight:bold;
-        }
+a {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
 
         /* INICIO BIENVENIDA */
 
