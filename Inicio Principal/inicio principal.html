@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="inicio principal.css">
     <title>Inicio Principal - Study Hub</title>
 </head>
 <body>
     
+    <!--Nav Lateral-->
+    <aside> 
+        <div class="brand">📚 Study Hub</div>
+        <nav>
+            <button class="active" onclick="mostrarSeccion('panel')">📊 Panel Principal</button>
+            <button onclick="mostrarSeccion('quizzes')" >🧠 Quizzes</button>
+            <button onclick="mostrarSeccion('videos')">📹 Videos</button>
+            <button onclick="mostrarSeccion('resúmenes')">📄 Resúmenes</button>
+            <button onclick="mostrarSeccion('mapas conceptuales')">Mapas Conceptuales</button>
+        </nav>
+    </aside>
+
+    <!--Área de Trabajo-->
+    <div class="wrapper">
+        <header>
+            <div id="infoUsuario" class="user-profile">
+                <!--Se inyecta dinámicamente con JS-->
+            </div>
+            <button class="btn-logout" onclick="cerrar sesion()">Cerrar Sesión</button>
+        </header>
+
+        <main>
+            <section class="hero banner">
+                
+            </section>
+        </main>
+    </div>
 </body>
 </html>

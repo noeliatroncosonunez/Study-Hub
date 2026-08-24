@@ -1,0 +1,150 @@
+:root {
+            --bg-main: #f8fafc;
+            --sidebar-bg: #0f172a;
+            --accent-color: #6366f1;
+            --accent-hover: #4f46e5;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-dark); display: flex; min-height: 100vh; }
+
+        /* NAVEGACIÓN LATERAL (SIDEBAR) */
+        aside {
+            width: 260px;
+            background-color: var(--sidebar-bg);
+            color: #white;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 16px;
+        }
+
+        aside .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            padding-left: 8px;
+        }
+
+        aside nav { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+        
+        aside nav button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+
+        aside nav button:hover, aside nav button.active {
+            background-color: #1e293b;
+            color: #ffffff;
+        }
+
+        aside nav button.active { border-left: 4px solid var(--accent-color); }
+
+        /* ZONA DE CONTENIDO PRINCIPAL */
+        .wrapper { flex: 1; display: flex; flex-direction: column; overflow-y: auto; }
+
+        header {
+            background-color: #ffffff;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .user-profile { display: flex; align-items: center; gap: 12px; }
+        .badge-curso { background-color: #e0e7ff; color: #4338ca; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+        
+        .btn-logout {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        main { padding: 32px; max-width: 1200px; width: 100%; margin: 0 auto; }
+
+        /* TARJETA DE BIENVENIDA */
+        .hero-banner {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 28px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-banner h2 { font-size: 26px; margin-bottom: 6px; }
+
+        /* GRID INTERACTIVO */
+        .section-title { font-size: 20px; margin-bottom: 16px; color: var(--text-dark); }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* COMPONENTE: QUIZ INTERACTIVO */
+        .quiz-option {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover { background-color: #e0e7ff; border-color: var(--accent-color); }
+        .feedback { margin-top: 12px; font-weight: 700; font-size: 14px; }
+
+        /* COMPONENTE: VIDEOS & RESÚMENES */
+        .item-list { list-style: none; margin-top: 12px; }
+        .item-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .btn-action {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+        }
