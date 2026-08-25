@@ -170,7 +170,7 @@
 #usuarioLogueado {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     border-radius: 24px;
 }
 
@@ -183,6 +183,7 @@
     font-size: 0.95rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    background-color: #facc15;
 }
 
 a {
@@ -532,31 +533,27 @@ body{
 
 /*========== BOTÓN VOLVER ==========*/
 
-.volver{
-
-    text-align:center;
-    margin-bottom:50px;
-
+.btn-volver {
+    display: flex;          /* Permite usar margin auto */
+    width: fit-content;     /* Ajusta el ancho al contenido */
+    margin: 0 auto;         /* Centra horizontalmente */
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: #facc15;
+    color: #1e293b;         /* Texto oscuro para mejor legibilidad */
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.volver button{
-
-    background:#01579b;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:30px;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
-
-}
-
-.volver button:hover{
-
-    background:#0288d1;
-    transform:translateY(-3px);
-
+.btn-volver:hover {
+    background-color: #1d4ed8;
+    transform: translateX(-3px); /* Da un ligero efecto visual hacia la izquierda */
 }
 
 /*========== RESPONSIVE ==========*/

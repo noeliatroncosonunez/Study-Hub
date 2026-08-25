@@ -11,11 +11,12 @@ body {
 }
 
 header {
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #1c66c7, #0463d1);
+    background:linear-gradient( 135deg,#0d47a1,#0288d1,
+  #4fc3f7);
     color: white;
 }
 
