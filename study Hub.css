@@ -171,13 +171,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    border-radius: 24px;
 }
 
 /* Estilos base de los botones dentro del contenedor */
 #usuarioLogueado .btn {
     display: inline-block;
     padding: 9px 18px;
-    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95rem;
