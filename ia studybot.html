@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="study hub.css">
+    <link rel="stylesheet" href="study_hub.css">
     <title>Study Hub | IA StudyBot</title>
 </head>
 <body>
@@ -14,57 +14,46 @@
 </header>
 
 <main class="chat-container">
+    <article class="chat-box" id="chatBox">
 
-```
-<div class="chat-box" id="chatBox">
+        <article class="mensaje bot">
+            👋 ¡Hola! Soy StudyBot.
+            Puedo ayudarte con Matemáticas, Historia, Ciencias, Programación y técnicas de estudio.
+        </article>
+    </article>
 
-    <div class="mensaje bot">
-        👋 ¡Hola! Soy StudyBot.
-        Puedo ayudarte con Matemáticas, Historia, Ciencias, Programación y técnicas de estudio.
-    </div>
+    <article class="sugerencias">
 
-</div>
+        <button onclick="preguntaRapida('¿Qué es HTML?')">💻 HTML</button>
 
-<div class="sugerencias">
+        <button onclick="preguntaRapida('Ayúdame con matemáticas')">📐 Matemáticas</button>
 
-    <button onclick="preguntaRapida('¿Qué es HTML?')">💻 HTML</button>
+        <button onclick="preguntaRapida('¿Qué es la fotosíntesis?')">🌱 Biología</button>
 
-    <button onclick="preguntaRapida('Ayúdame con matemáticas')">📐 Matemáticas</button>
+        <button onclick="preguntaRapida('Consejos para estudiar')">📚 Estudio</button>
+    </article>
 
-    <button onclick="preguntaRapida('¿Qué es la fotosíntesis?')">🌱 Biología</button>
+    <article class="input-container">
 
-    <button onclick="preguntaRapida('Consejos para estudiar')">📚 Estudio</button>
-
-</div>
-
-<div class="input-container">
-
-    <input
-        type="text"
-        id="pregunta"
+        <input type="text" id="pregunta"
         placeholder="Escribe tu pregunta..."
-    >
+        >
 
-    <button onclick="responderIA()">
-        Enviar
-    </button>
+        <button onclick="responderIA()">
+            Enviar
+        </button>
+    </article>
 
-</div>
-
-<div class="acciones-chat">
-    <button onclick="limpiarChat()">
-        🗑️ Limpiar Chat
-    </button>
-</div>
-```
-
+    <article class="acciones-chat">
+        <button onclick="limpiarChat()">
+            🗑️ Limpiar Chat
+        </button>
+    </article>
 </main>
 
-<a href="study hub.html" class="btn-volver">&larr; Volver al Inicio</a>
+    <a href="study_hub.html" class="btn-volver">&larr; Volver al Inicio</a>
 
-</section>
-
-    <script src="study Hub.js"></script>
+    <script src="study_hub.js"></script>
 
 </body>
 </html>
